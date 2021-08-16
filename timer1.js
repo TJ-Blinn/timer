@@ -17,8 +17,8 @@ Pseudocode
 
 const timer = function (time) {
   const cmdInput = process.argv.slice(2);
-
-  if (cmdInput === " " && cmdInput <= 0 && isNaN(time)) {
+  // checking for edge cases
+  if (cmdInput === " " || cmdInput <= 0 || isNaN(time)) {
     return null;
   }
 
@@ -36,4 +36,4 @@ const timer = function (time) {
 };
 
 timer();
-// process.argv for this to run | node timer1.js 5
+// *********** process.argv for this to run | node timer1.js 5 *****************
